@@ -230,7 +230,7 @@ USB线*1
 
    {
 
-           for (int a=0; a<=255;a++)// 设置使LED逐渐变亮
+       for (int a=0; a<=255;a++)// 设置使LED逐渐变亮
 
        {
 
@@ -520,8 +520,7 @@ USB线*1
 
 测试结果
 
-| 上传完代码，上电后
-| ，我们就可以看到双色LED模块上LED显示红色1秒，绿色1秒，循环交替。
+上传完代码，上电后，我们就可以看到双色LED模块上LED显示红色1秒，绿色1秒，循环交替。
 
 .. _实验四-5V单路继电器模块:
 
@@ -1164,7 +1163,8 @@ DHT11温湿度传感器*1
 
    #define DHT11_PIN 3                     // 定义传感器数据线连接的引脚（数字引脚3）
 
-   void setup() {                          // 初始化函数（仅运行一次）
+   void setup() 
+   {                          // 初始化函数（仅运行一次）
        Serial.begin(9600);                 // 初始化串口通信，设置波特率为9600
        Serial.println("DHT TEST PROGRAM"); // 打印程序标题（注意原代码末尾有空格保留）
        Serial.print("LIBRARY VERSION: ");  // 打印库版本标签
@@ -1181,7 +1181,8 @@ DHT11温湿度传感器*1
        
        chk = DHT.read(DHT11_PIN);          // 读取传感器数据（返回状态码）
        
-       switch (chk) {                      // 根据状态码进行分支处理
+       switch (chk) 
+       {                      // 根据状态码进行分支处理
            case DHTLIB_OK:                 // 状态码0：读取成功
                Serial.print("OK,\t");      // 打印正常状态
                break;

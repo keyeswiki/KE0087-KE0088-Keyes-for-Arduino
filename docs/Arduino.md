@@ -842,8 +842,8 @@ double Thermister(int RawADC)
 
     Temp = log(((10240000/RawADC) - 10000));
 
-    Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 \* Temp \*
-    Temp ))\* Temp );
+    Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * Temp *
+    Temp ))* Temp );
 
     Temp = Temp - 273.15; // Convert Kelvin to Celcius
 
@@ -927,7 +927,7 @@ void loop()
 
     val=analogRead(0);//将val设置为读取到的A0的数值
 
-    dat=(500 \* val) /1024; //计算出当前温度数字dat
+    dat=(500 * val) /1024; //计算出当前温度数字dat
 
     Serial.print("Temp:"); //显示 Temp:
 
